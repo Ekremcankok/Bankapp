@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbHostModelStoreContainer" CdmEntityContainer="dbHostEntities2">
+    <EntitySetMapping Name="host">
+      <EntityTypeMapping TypeName="dbHostModel.host">
+        <MappingFragment StoreEntitySet="host">
+          <ScalarProperty Name="hesapId" ColumnName="hesapId" />
+          <ScalarProperty Name="hostadı" ColumnName="hostadı" />
+          <ScalarProperty Name="hostdescription" ColumnName="hostdescription" />
+          <ScalarProperty Name="fiyat" ColumnName="fiyat" />
+          <ScalarProperty Name="konum" ColumnName="konum" />
+          <ScalarProperty Name="kullanıcıadı" ColumnName="kullanıcıadı" />
+          <ScalarProperty Name="yorumlar" ColumnName="yorumlar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kullanici">
+      <EntityTypeMapping TypeName="dbHostModel.Kullanici">
+        <MappingFragment StoreEntitySet="Kullanici">
+          <ScalarProperty Name="müsteriId" ColumnName="müsteriId" />
+          <ScalarProperty Name="isim" ColumnName="isim" />
+          <ScalarProperty Name="soyisim" ColumnName="soyisim" />
+          <ScalarProperty Name="kullanıcıadı" ColumnName="kullanıcıadı" />
+          <ScalarProperty Name="parola" ColumnName="parola" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

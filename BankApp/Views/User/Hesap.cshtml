@@ -1,0 +1,147 @@
+﻿@model IEnumerable<HicFarketmezBank.Models.host>
+
+@{
+    ViewBag.Title = "Hesap";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto&display=swap" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="~/Content/materialize.min.css" media="screen,projection" />
+    <!--<link type="text/css" rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Import SearchPage.css-->
+    <link rel="stylesheet" type="text/css" href="~/Content/SearchPage.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arama</title>
+</head>
+<body class="bg-secondary">
+    <nav class="nav-item d-flex container navmenu">
+        <h1 class="pt-1 mb-0 mt-2 fontLB"><a href="Hostbul.html" class="a">HOSTBUL</a></h1>
+        <div class="nav-item text-right w-100 bgSet">
+            <a class="btn btn-light fontRB" style="" href="">Giriş Yap</a>
+            <a class="btn btn-secondary fontRB" href="">Kayıt Ol</a>
+        </div>
+    </nav>
+    <div class="container saydam rounded z-depth-1 pt-1 mt-4 mb-5 pb-2 h-100">
+        <div class="input-group z-depth-1 bg-light deneme py-2 mt-3 mx-auto">
+            <div class="input-field rounded d-flex my-0 py-0 mx-auto w-100">
+                <i class="material-icons prefix ml-2" style="color:#555;">search</i>
+                <input id="icon_prefix" type="text" autofocus class="validate px-2 mr-2 py-0 mb-0 col-5"
+                       style="box-shadow: 0 0 5px 1px #999;border-bottom: 0px solid #000;border-radius: 5px;">
+                <select class="custom-select px-2 customSlct" id="inputGroupSelect01">
+                    <option selected>Şehir</option>
+                    <option data-tokens="istanbul" value="1">İstanbul</option>
+                    <option data-tokens="ankara" value="2">Ankara</option>
+                    <option data-tokens="izmir" value="3">İzmir</option>
+                </select>
+                <select class="custom-select px-2 mx-2 customSlct" id="inputGroupSelect01">
+                    <option selected>İlçe</option>
+                    <option value="1">Kadıköy</option>
+                    <option value="2">Taksim</option>
+                    <option value="3">Beşiktaş</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="row ml-1 mt-3">
+            <div class="container px-0 col-3">
+                <ul class="list-group z-depth-1">
+                    <h1 class="list-group-item mb-0">HOSTBUL</h1>
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+            <div class="col-9 pl-3">
+                <div class="row mb-0">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-4">
+                            <div class="card my-0">
+                                <img class="card-img-top" src="~/Content/Image/cardimg.jpg" height="200">
+                                <div class="card-body">
+                                    <div class="card-title">@Html.DisplayFor(modelItem => item.hostadı)</div>
+                                    <p>
+                                        @Html.DisplayFor(modelItem => item.hostdescription)
+                                    </p>
+                                    <a href="#" class="btn btn-primary float-right">Kirala</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+                    <div class="col-4">
+                        <div class="card my-0">
+                            <img class="card-img-top" src="~/Content/Image/cardimg.jpg" height="200">
+                            <div class="card-body">
+                                <div class="card-title">House</div>
+                                <p>En uygun daire</p>
+                                <a href="#" class="btn btn-primary float-right">Kirala</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card my-0">
+                            <img class="card-img-top" src="~/Content/Image/cardimg.jpg" height="200">
+                            <div class="card-body">
+                                <div class="card-title">House</div>
+                                <p>En uygun daire</p>
+                                <a href="#" class="btn btn-primary float-right">Kirala</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-4">
+                        <div class="card mb-0">
+                            <img class="card-img-top" src="~/Content/Image/cardimg.jpg" height="200">
+                            <div class="card-body">
+                                <div class="card-title">House</div>
+                                <p>En uygun daire</p>
+                                <a href="#" class="btn btn-primary float-right">Kirala</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card mb-0">
+                            <img class="card-img-top" src="~/Content/Image/cardimg.jpg" height="200">
+                            <div class="card-body">
+                                <div class="card-title">House</div>
+                                <p>En uygun daire</p>
+                                <a href="#" class="btn btn-primary float-right">Kirala</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card mb-0">
+                            <img class="card-img-top" src="~/Content/Image/cardimg.jpg" height="200">
+                            <div class="card-body">
+                                <div class="card-title">House</div>
+                                <p>En uygun daire</p>
+                                <a href="#" class="btn btn-primary float-right">Kirala</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,14 @@
+C:\Users\ekrem\source\repos\HicFarketmezBank\EmpoloyeeDataAccess\bin\Debug\EmpoloyeeDataAccess.dll.config
+C:\Users\ekrem\source\repos\HicFarketmezBank\EmpoloyeeDataAccess\bin\Debug\EmpoloyeeDataAccess.dll
+C:\Users\ekrem\source\repos\HicFarketmezBank\EmpoloyeeDataAccess\bin\Debug\EmpoloyeeDataAccess.pdb
+C:\Users\ekrem\source\repos\HicFarketmezBank\EmpoloyeeDataAccess\bin\Debug\EntityFramework.dll
+C:\Users\ekrem\source\repos\HicFarketmezBank\EmpoloyeeDataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ekrem\source\repos\HicFarketmezBank\EmpoloyeeDataAccess\bin\Debug\Microsoft.Analytics.Interfaces.dll
+C:\Users\ekrem\source\repos\HicFarketmezBank\EmpoloyeeDataAccess\bin\Debug\Microsoft.Analytics.Interfaces.Streaming.dll
+C:\Users\ekrem\source\repos\HicFarketmezBank\EmpoloyeeDataAccess\bin\Debug\Microsoft.Analytics.Types.dll
+C:\Users\ekrem\source\repos\HicFarketmezBank\EmpoloyeeDataAccess\bin\Debug\EntityFramework.xml
+C:\Users\ekrem\source\repos\HicFarketmezBank\EmpoloyeeDataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ekrem\source\repos\HicFarketmezBank\EmpoloyeeDataAccess\obj\Debug\EmpoloyeeDataAccess.csprojAssemblyReference.cache
+C:\Users\ekrem\source\repos\HicFarketmezBank\EmpoloyeeDataAccess\obj\Debug\EmpoloyeeDataAccess.csproj.CopyComplete
+C:\Users\ekrem\source\repos\HicFarketmezBank\EmpoloyeeDataAccess\obj\Debug\EmpoloyeeDataAccess.dll
+C:\Users\ekrem\source\repos\HicFarketmezBank\EmpoloyeeDataAccess\obj\Debug\EmpoloyeeDataAccess.pdb

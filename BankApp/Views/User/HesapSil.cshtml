@@ -1,0 +1,95 @@
+﻿@model HicFarketmezBank.Models.Hesap
+
+@{
+    ViewBag.Title = "HesapSil";
+}
+
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="~/Content/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="~/Scripts/jquery-3.4.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="~/Scripts/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="~/Scripts/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/df9989603e.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+        <link href="~/Content/simple-sidebar.css" rel="stylesheet">
+        <title>Hiç Farketmez Bankası</title>
+    </head>
+    <style type="text/css">
+        ul {
+            list-style-type: none;
+            padding-left: 10px;
+            !important
+        }
+
+        #page-content-wrapper {
+            color: #FF9F1C;
+        }
+
+        #card {
+            background-color: #182B3A;
+            color: white;
+        }
+
+        .card {
+            background-color: #E71D36;
+            color: white;
+        }
+
+        .btn {
+            background-color: #182B3A;
+        }
+    </style>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <div class="border-right" id="sidebar-wrapper">
+                <div class="h2 mx-3 my-3">Hiç Farketmez</div>
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action">Profil</a>
+                    <a href="/User/Hesap" class="list-group-item list-group-item-action">Hesaplarım</a>
+                    <a href="#" class="list-group-item list-group-item-action">Kartlarım</a>
+                    <a href="#" class="list-group-item list-group-item-action">Online İşlemler</a>
+                    <a href="#" class="list-group-item list-group-item-action">Kredi</a>
+                    <form action="/User/exit" method="post">
+                        <button type="submit" class="list-group-item list-group-item-action">Çıkış</button>
+                    </form>
+                </div>
+            </div>
+            <div id="page-content-wrapper" style="background-color: #011627">
+                <div class="container mx-auto">
+                    <h2 class="my-4 ml-5 pl-5">Hesap İşlemleri</h2>
+                    <div class="row mx-auto pl-5">
+                        <div class="card col-6 mx-auto mb-3 shadow-lg rounded" style="border: 0px solid;">
+                            <h5 class="ml-3 mt-4 mb-0"><i class="fas fa-wallet mr-2"></i>Hesap Silme</h5>
+                            <div class="card-body">
+                                <form action="/User/HesapSil" class="mx-0 my-3" method="post">
+                                    <label for="select1">Silinecek Hesap Numarası</label>
+                                    @Html.EditorFor(model => model.hesapNo, new
+                               {
+                                   htmlAttributes = new
+                                   {
+                   @id = "hesapNo",
+                   @class = "form-control mx-auto",
+                   @type = "text",
+                   @oninput = "javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);",
+                   onkeypress="return event.charCode>= 48 &&event.charCode<= 57",
+                   @step = "1",
+                   @maxlength = "3",
+                   @required = "True"
+                                   }
+                               })
+                                    <button class="btn mt-3 float-right px-4 py-2 text-light">Hesabı Sil</button>
+                                    <div class="form-group error">
+                                        <label class="text-light"> @ViewBag.NotValidHesapNo</label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>

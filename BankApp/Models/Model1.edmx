@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbBankAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Havale">
+          <Key>
+            <PropertyRef Name="havaleId" />
+          </Key>
+          <Property Name="havaleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="gönderenMüsteriNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="gönderenHesapNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="alıcıMüsteriNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="alıcıHesapNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="gönderilenMiktar" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Hesap">
+          <Key>
+            <PropertyRef Name="hesapId" />
+          </Key>
+          <Property Name="hesapId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="müsteriNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="hesapNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="bakiye" Type="nvarchar" MaxLength="50" />
+          <Property Name="hesapDurumu" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Müsteri">
+          <Key>
+            <PropertyRef Name="müsteriId" />
+          </Key>
+          <Property Name="müsteriId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="isim" Type="nvarchar" MaxLength="50" />
+          <Property Name="soyisim" Type="nvarchar" MaxLength="50" />
+          <Property Name="tcNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="müsteriNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="telefon" Type="nvarchar" MaxLength="50" />
+          <Property Name="parola" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="dbBankAppModelStoreContainer">
+          <EntitySet Name="Havale" EntityType="Self.Havale" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hesap" EntityType="Self.Hesap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Müsteri" EntityType="Self.Müsteri" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbBankAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Havale">
+          <Key>
+            <PropertyRef Name="havaleId" />
+          </Key>
+          <Property Name="havaleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="gönderenMüsteriNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="gönderenHesapNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="alıcıMüsteriNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="alıcıHesapNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="gönderilenMiktar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Hesap">
+          <Key>
+            <PropertyRef Name="hesapId" />
+          </Key>
+          <Property Name="hesapId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="müsteriNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hesapNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="bakiye" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hesapDurumu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Müsteri">
+          <Key>
+            <PropertyRef Name="müsteriId" />
+          </Key>
+          <Property Name="müsteriId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="isim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="soyisim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tcNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="müsteriNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="parola" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="dbBankAppEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Havale" EntityType="Self.Havale" />
+          <EntitySet Name="Hesap" EntityType="Self.Hesap" />
+          <EntitySet Name="Müsteri" EntityType="Self.Müsteri" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbBankAppModelStoreContainer" CdmEntityContainer="dbBankAppEntities">
+          <EntitySetMapping Name="Havale">
+            <EntityTypeMapping TypeName="dbBankAppModel.Havale">
+              <MappingFragment StoreEntitySet="Havale">
+                <ScalarProperty Name="havaleId" ColumnName="havaleId" />
+                <ScalarProperty Name="gönderenMüsteriNo" ColumnName="gönderenMüsteriNo" />
+                <ScalarProperty Name="gönderenHesapNo" ColumnName="gönderenHesapNo" />
+                <ScalarProperty Name="alıcıMüsteriNo" ColumnName="alıcıMüsteriNo" />
+                <ScalarProperty Name="alıcıHesapNo" ColumnName="alıcıHesapNo" />
+                <ScalarProperty Name="gönderilenMiktar" ColumnName="gönderilenMiktar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hesap">
+            <EntityTypeMapping TypeName="dbBankAppModel.Hesap">
+              <MappingFragment StoreEntitySet="Hesap">
+                <ScalarProperty Name="hesapId" ColumnName="hesapId" />
+                <ScalarProperty Name="müsteriNo" ColumnName="müsteriNo" />
+                <ScalarProperty Name="hesapNo" ColumnName="hesapNo" />
+                <ScalarProperty Name="bakiye" ColumnName="bakiye" />
+                <ScalarProperty Name="hesapDurumu" ColumnName="hesapDurumu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Müsteri">
+            <EntityTypeMapping TypeName="dbBankAppModel.Müsteri">
+              <MappingFragment StoreEntitySet="Müsteri">
+                <ScalarProperty Name="müsteriId" ColumnName="müsteriId" />
+                <ScalarProperty Name="isim" ColumnName="isim" />
+                <ScalarProperty Name="soyisim" ColumnName="soyisim" />
+                <ScalarProperty Name="tcNo" ColumnName="tcNo" />
+                <ScalarProperty Name="müsteriNo" ColumnName="müsteriNo" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="parola" ColumnName="parola" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

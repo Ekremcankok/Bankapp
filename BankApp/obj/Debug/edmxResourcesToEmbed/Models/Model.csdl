@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbHostModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="host">
+    <Key>
+      <PropertyRef Name="hesapId" />
+    </Key>
+    <Property Name="hesapId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="hostadı" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hostdescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="fiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="konum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="kullanıcıadı" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="yorumlar" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Kullanici">
+    <Key>
+      <PropertyRef Name="müsteriId" />
+    </Key>
+    <Property Name="müsteriId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="isim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="soyisim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="kullanıcıadı" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="parola" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="dbHostEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="host" EntityType="Self.host" />
+    <EntitySet Name="Kullanici" EntityType="Self.Kullanici" />
+  </EntityContainer>
+</Schema>

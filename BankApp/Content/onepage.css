@@ -1,0 +1,37 @@
+body {
+	background:linear-gradient(
+	rgba(0, 0, 0, 0.5), 
+	rgba(0, 0, 0, 0.5)
+	),url("./Image/citybg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.navmenu{
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+}
+.fontLB {
+	font-family: 'Libre Baskerville', serif;
+}
+.bgSet {
+	background: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.0));
+}
+.fontRB {
+	font-family: 'Roboto', sans-serif;
+	text-transform: lowercase;
+}
+.h-100 {
+	height: 100%;
+}
+.prefix {
+  color:#000;
+}
+.a{
+  text-decoration: none;
+}
+.a:hover {
+  color: white;
+  text-decoration: none;
+}

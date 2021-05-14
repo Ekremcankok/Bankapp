@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbBankaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Havale">
+    <Key>
+      <PropertyRef Name="havaleId" />
+    </Key>
+    <Property Name="havaleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="gönderenMüsteriNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="gönderenHesapNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="alıcıMüsteriNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="alıcıHesapNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="gönderilenMiktar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Hesap">
+    <Key>
+      <PropertyRef Name="hesapId" />
+    </Key>
+    <Property Name="hesapId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="müsteriNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hesapNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bakiye" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hesapDurumu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Müsteri">
+    <Key>
+      <PropertyRef Name="müsteriId" />
+    </Key>
+    <Property Name="müsteriId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="isim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="soyisim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tcNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="müsteriNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="parola" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityContainer Name="dbBankaEntities5" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Havale" EntityType="Self.Havale" />
+    <EntitySet Name="Hesap" EntityType="Self.Hesap" />
+    <EntitySet Name="Müsteri" EntityType="Self.Müsteri" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+  </EntityContainer>
+</Schema>

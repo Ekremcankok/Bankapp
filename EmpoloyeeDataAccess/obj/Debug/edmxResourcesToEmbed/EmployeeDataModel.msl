@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbHgsModelStoreContainer" CdmEntityContainer="dbHgsEntities">
+    <EntitySetMapping Name="hgsIslem">
+      <EntityTypeMapping TypeName="dbHgsModel.hgsIslem">
+        <MappingFragment StoreEntitySet="hgsIslem">
+          <ScalarProperty Name="hgsId" ColumnName="hgsId" />
+          <ScalarProperty Name="müsteriNo" ColumnName="müsteriNo" />
+          <ScalarProperty Name="Bakiye" ColumnName="Bakiye" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
